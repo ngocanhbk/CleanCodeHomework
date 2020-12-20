@@ -1,6 +1,6 @@
 # CleanCodeHomework
 
-##Bài tập payroll
+## Bài tập payroll
 1. Input: tạo data trong thư mục input. Data trong file csv không cần header.
 2. Những point làm được:
 - Đọc file csv và in ra số tuổi, thời gian làm việc: theo số năm và số tháng.
