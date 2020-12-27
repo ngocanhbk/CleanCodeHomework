@@ -10,3 +10,13 @@
 - Tính lương phiên bản 2.0
 ## Refactor code GraphicsEditor
 Đã làm.
+## Refactor code tính phí điện thoại
+Refactore lại code nhằm loại bỏ Switch bằng Polymorphism
+Gồm các class:
+- Customer
+- CustomerType
+- MonthlyUsage
+- MonthlyStatement
+Mục đích của bài tập nhằm tính ra tiền phí điện thoại hàng tháng của khách hàng căn cứ trên:
+- Thời lượng gọi
+- Số lượng tin nhắn
