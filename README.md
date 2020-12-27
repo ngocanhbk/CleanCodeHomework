@@ -17,6 +17,8 @@ Gồm các class:
 - CustomerType
 - MonthlyUsage
 - MonthlyStatement
+
 ==> Mục đích của bài tập nhằm tính ra tiền phí điện thoại hàng tháng của khách hàng căn cứ trên:
+
 - Thời lượng gọi
 - Số lượng tin nhắn
