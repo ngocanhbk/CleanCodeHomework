@@ -16,8 +16,11 @@
 - Nếu không cleanCode, có thể có bug tiềm ẩn mà coder có thể khó phát hiện được
 - Giả sử bạn code 1 đoạn code chỉ trong 10p, tuy nhiên người tiếp nhận đoạn code đấy của bạn mất tận 1 giờ để có thể hiểu bạn code gì,
 vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và người tiếp nhận chỉ đọc 1 lần là hiểu, cách nào tốn công số hơn.
-4.
-
+4.Đề xuất của Bob và Vân là phù hợp, tuy nhiên mỗi đề xuất có các lỗi riêng
+Đề xuất của Bob: int calculateSalaryAfterYears(int years, float raise);
+==> có thể sử dụng float raise là thuộc tính trong class Salary
+Đề xuất của Vân: int calculateSalaryAfterYears(int initialSalary, int NthYear);
+==> biến NthYear đặt tên khó hiểu, "Nth" là gì??
 5.
 
 ## Phần 2: OOP và SOLID
@@ -40,4 +43,4 @@ vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và ngườ
 6.B		7.B		8.A		9.B		10.A	
 11.D	12.C	13.B	14.D	15.D	
 16.B	17.D	18.A	19.C	20.B	
-21.B	22.		23.		24.		25.	
+21.B	22.		23.B	24.A	25.	
