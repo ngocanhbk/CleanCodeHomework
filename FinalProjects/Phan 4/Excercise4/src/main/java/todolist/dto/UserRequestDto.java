@@ -1,16 +1,12 @@
 package todolist.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
-
-/**
- * Request DTO
- */
 @Data
-public class StudentReqDto {
-
+public class UserRequestDto {
     @ApiModelProperty(value = "User ID", example = "1")
     private Integer userId;
 
@@ -31,5 +27,8 @@ public class StudentReqDto {
 
     @ApiModelProperty(value = "Student")
     private StudentDto student;
+
+    @ApiModelProperty(value = "Teacher")
+    private TeacherDto teacher;
 
 }

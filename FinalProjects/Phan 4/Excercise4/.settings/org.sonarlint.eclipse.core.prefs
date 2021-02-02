@@ -1,2 +1,6 @@
 autoEnabled=false
 eclipse.preferences.version=1
+idePrefixKey=
+projectKey=ESR_DEV
+serverId=sonar.luvina.pro
+sqPrefixKey=

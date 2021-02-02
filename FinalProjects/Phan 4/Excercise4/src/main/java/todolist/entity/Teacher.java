@@ -17,7 +17,7 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer teacherId;
 
-    private String experiences;
+    private Integer experiences;
 
     private String phone;
 

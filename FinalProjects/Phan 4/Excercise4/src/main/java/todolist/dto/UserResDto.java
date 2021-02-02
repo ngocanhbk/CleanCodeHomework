@@ -15,7 +15,11 @@ public class UserResDto extends RepresentationModel<UserResDto> {
 
     @NotBlank
     @ApiModelProperty(value = "User name", example = "XYZ")
-    private String name;
+    private String userId;
+    
+    @NotBlank
+    @ApiModelProperty(value = "User name", example = "XYZ")
+    private String userName;
 
     @ApiModelProperty(value = "Email", example = "xyz@gmail.com")
     private String email;

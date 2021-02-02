@@ -13,20 +13,20 @@ import org.springframework.util.CollectionUtils;
 
 import todolist.dto.UserRequestDto;
 import todolist.dto.UserResDto;
-import todolist.entity.Student;
+import todolist.entity.Teacher;
 import todolist.entity.User;
 import todolist.error.ErrorCodes;
 import todolist.error.ServiceRuntimeException;
-import todolist.repository.StudentRepository;
+import todolist.repository.TeacherRepository;
 import todolist.repository.UserRepository;
 
 @Service
-public class StudentService implements UserService {
+public class TeacherService implements UserService{
     @Autowired
     UserRepository userRepository;
 
     @Autowired
-    StudentRepository studentRepository;
+    TeacherRepository teacherRepository;
 
     @Autowired
     ModelMapper modelMapper;
@@ -50,12 +50,14 @@ public class StudentService implements UserService {
         }
         modelMapper.map(userRequestDto, user);
         User savedUser = userRepository.save(user);
+        if (userRequestDto.getTeacher() != null) {
+            Teacher teacher = new Teacher();
+            teacher.setUserId(savedUser.getUserId());
+            teacher.setExperiences(userRequestDto.getTeacher().getExperiences());
+            teacher.setPhone(userRequestDto.getTeacher().getPhone());
 
-        Student student = new Student();
-        student.setUserId(savedUser.getUserId());
-        student.setYear(userRequestDto.getStudent().getYear());
-
-        studentRepository.save(student);
+            teacherRepository.save(teacher);
+        }
         return modelMapper.map(savedUser, UserResDto.class);
     }
 }
