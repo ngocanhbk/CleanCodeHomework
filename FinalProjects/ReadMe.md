@@ -16,19 +16,24 @@
 - Nếu không cleanCode, có thể có bug tiềm ẩn mà coder có thể khó phát hiện được
 - Giả sử bạn code 1 đoạn code chỉ trong 10p, tuy nhiên người tiếp nhận đoạn code đấy của bạn mất tận 1 giờ để có thể hiểu bạn code gì,
 vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và người tiếp nhận chỉ đọc 1 lần là hiểu, cách nào tốn công số hơn.
+4.
+
+5.
+
 ## Phần 2: OOP và SOLID
 ### 1. Hãy lập trình Java để thực hiện thiết kế như hình vẽ
-Gõ link đến mã nguồn bài này vào đây. Đừng comment code. Nếu thực sự CleanCode thì không cần comment vẫn hiểu được.
+[Link source BT phần 2](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%202)
 
 ### 2. Composition over Inheritance và DI
-[Link source BT phần 2](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%202)
 
 ## Phần 3: Thiết kế CSDL Quan hệ theo đặc tả
 [Link source BT phần 3](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%203)
 
 ## Phần 4: Thiết kế RESTful API
+[Link source BT phần 4](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%204/Excercise4)
 
 ## Phần 5: Lập trình Restful API
+[Link source BT phần 5](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%205/Excercise5)
 
 ## Trắc nghiệm
 1.C		2.B		3.D		4.C		5.A	
