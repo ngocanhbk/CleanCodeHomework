@@ -7,6 +7,6 @@ import lombok.Data;
 public class StudentDto {
 
     @ApiModelProperty(value = "year", example = "2020")
-    private String year;
+    private Integer year;
 
 }

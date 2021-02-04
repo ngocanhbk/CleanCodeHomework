@@ -1,9 +1,12 @@
 package todolist.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -11,14 +14,12 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "student")
-public class Student {
+@PrimaryKeyJoinColumn(name = "studentId")
+public class Student extends User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer studentId;
+    private Integer year;
 
-    private String year;
-
-    private Integer userId;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "student")
+    private Set<Enroll> enrolls = new HashSet<>();
 
 }

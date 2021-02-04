@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import todolist.dto.CourseResDto;
-import todolist.dto.CourseSubtype2Dto;
+import todolist.entity.Course;
 import todolist.repository.CourseRepository;
 import todolist.service.strategy.SortByName;
 import todolist.service.strategy.SortByOpened;
@@ -43,25 +43,24 @@ public class CourseService {
     // @CachePut(value = "course", key = "#result.id")
     public List<CourseResDto> getCourses(String keyword, String orderBy) {
 
-        List<CourseSubtype2Dto> courses;
+        List<Course> courses;
         if (keyword != null && !"".equals(keyword)) {
-            courses = courseRepository.findByCourseNameLike(keyword);
+            courses = courseRepository.findByCourseNameContainingIgnoreCase(keyword);
         } else {
-            courses = courseRepository.findAllCourse();
+            courses = courseRepository.findAll();
         }
         if (orderBy != null) {
             SortStrategy sortingStrategy = lookupSortingStrategy(orderBy);
             sortingStrategy.sort(courses);
         }
-
         List<CourseResDto> listCourse = new ArrayList<>();
         if (!CollectionUtils.isEmpty(courses)) {
             courses.forEach(item -> {
                 CourseResDto course = new CourseResDto();
-                course.setId(item.getId());
-                course.setName(item.getName());
+                course.setId(item.getCourseId());
+                course.setName(item.getCourseName());
                 course.setLocation(item.getLocation());
-                course.setTeacherName(item.getTeacherName());
+                course.setTeacherName(item.getTeacher().getUserName());
                 listCourse.add(course);
             });
         }

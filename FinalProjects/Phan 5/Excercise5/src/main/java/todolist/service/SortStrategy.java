@@ -2,8 +2,8 @@ package todolist.service;
 
 import java.util.List;
 
-import todolist.dto.CourseSubtype2Dto;
+import todolist.entity.Course;
 
 public interface SortStrategy {
-    void sort(List<CourseSubtype2Dto> courses);
+    void sort(List<Course> courses);
 }

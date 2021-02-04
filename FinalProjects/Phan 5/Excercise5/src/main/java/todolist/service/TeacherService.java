@@ -1,7 +1,6 @@
 package todolist.service;
 
 import java.util.List;
-import java.util.Objects;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ import todolist.repository.TeacherRepository;
 import todolist.repository.UserRepository;
 
 @Service
-public class TeacherService implements UserService{
+public class TeacherService implements UserService {
     @Autowired
     UserRepository userRepository;
 
@@ -40,24 +39,13 @@ public class TeacherService implements UserService{
             throw new ServiceRuntimeException(HttpStatus.NOT_FOUND, ErrorCodes.EMAIL_001,
                     String.format("The user with email adress #%s already exists.", userRequestDto.getEmail()));
         }
-        User user;
-        if (Objects.isNull(userRequestDto.getUserId())) {
-            user = new User();
-        } else {
-            user = userRepository.findById(userRequestDto.getUserId())
-                    .orElseThrow(() -> new ServiceRuntimeException(HttpStatus.NOT_FOUND, ErrorCodes.USER_001,
-                            String.format("User not found: #%s", userRequestDto.getUserId())));
-        }
-        modelMapper.map(userRequestDto, user);
-        User savedUser = userRepository.save(user);
+        Teacher teacher = new Teacher();
+        modelMapper.map(userRequestDto, teacher);
         if (userRequestDto.getTeacher() != null) {
-            Teacher teacher = new Teacher();
-            teacher.setUserId(savedUser.getUserId());
             teacher.setExperiences(userRequestDto.getTeacher().getExperiences());
             teacher.setPhone(userRequestDto.getTeacher().getPhone());
-
-            teacherRepository.save(teacher);
         }
-        return modelMapper.map(savedUser, UserResDto.class);
+        teacherRepository.save(teacher);
+        return modelMapper.map(teacher, UserResDto.class);
     }
 }
