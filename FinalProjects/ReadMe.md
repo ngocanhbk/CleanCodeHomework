@@ -22,6 +22,7 @@ vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và ngườ
 - Đề xuất của Vân: int calculateSalaryAfterYears(int initialSalary, int NthYear);
 ==> biến NthYear đặt tên khó hiểu, "Nth" là gì??
 5.
+[Link source BT 5 phần 1](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%201)
 
 ## Phần 2: OOP và SOLID
 ### 1. Hãy lập trình Java để thực hiện thiết kế như hình vẽ
@@ -43,4 +44,4 @@ vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và ngườ
 6.B		7.B		8.A		9.B		10.A	
 11.D	12.C	13.B	14.D	15.D	
 16.B	17.D	18.A	19.C	20.B	
-21.B	22.C	23.B	24.A	25.C	
+21.B	22.C	23.C	24.A	25.D	
