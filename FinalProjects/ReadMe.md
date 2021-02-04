@@ -43,4 +43,4 @@ vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và ngườ
 6.B		7.B		8.A		9.B		10.A	
 11.D	12.C	13.B	14.D	15.D	
 16.B	17.D	18.A	19.C	20.B	
-21.B	22.		23.B	24.A	25.	
+21.B	22.C	23.B	24.A	25.C	
