@@ -16,10 +16,7 @@
 - Nếu không cleanCode, có thể có bug tiềm ẩn mà coder có thể khó phát hiện được
 - Giả sử bạn code 1 đoạn code chỉ trong 10p, tuy nhiên người tiếp nhận đoạn code đấy của bạn mất tận 1 giờ để có thể hiểu bạn code gì,
 vậy việc bạn bỏ ra 30p để trau chuốt đoạn code trên và người tiếp nhận chỉ đọc 1 lần là hiểu, cách nào tốn công số hơn.
-4. Đề xuất của Bob và Vân là phù hợp, tuy nhiên mỗi đề xuất có các lỗi riêng.
-- Đề xuất của Bob: int calculateSalaryAfterYears(int years, float raise);
-==> có thể sử dụng float raise là thuộc tính trong class Salary.
-- Đề xuất của Vân: int calculateSalaryAfterYears(int initialSalary, int NthYear);
+4. Đề xuất của Vân là phù hợp, tuy nhiên đề xuất vẫn còn lỗi.
 ==> biến NthYear đặt tên khó hiểu, "Nth" là gì??
 5.
 [Link source BT 5 phần 1](https://github.com/ngocanhbk/CleanCodeHomework/tree/master/FinalProjects/Phan%201)
